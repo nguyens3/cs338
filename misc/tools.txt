@@ -1,0 +1,11 @@
+Author: Sydney Nguyen
+1. Using the ifconfig command I was able to find out that my IP address on my current wifi, Eduroam, is 192.168.35.128  
+2. We can determine the IP address associated with a given host and name with the command nslookup target-host. cite(https://linuxhint.com/resolve_hostname_ip_address_bash_script/)
+3. We can use the command ping to find the associated host name from a given ip address. cite(https://linuxhint.com/find-hostname-ip-linux/).
+4.You can copy a file using the cp command when copying the contents of a file on the same computer by inputting the source and then the destination however to 
+copy from one comptuer to another one must use the scp command which again copies the content of the source and destination but is able to do it across servers. 
+5. To see if a specific port is online or listening you may type  grep -w 80 but instead of 80 put in any desired port. (cite: https://www.cyberciti.biz/faq/how-do-i-check-if-a-port-is-in-use-on-linux/)
+6.To see all listening ports you can type into the command line netstat -l (cite: https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/).
+7. To save a given webpage to a file you can use wget "URL" -O filename.txt then you can use use wget the file name to retrieve the contents of the file info found on the man wgets. 
+8.Using the manual for curl to find the header you use the curl -i "URL" to view the HTTP headers sent back from a specified web server when you request one of its pages.
+9.To find the HTTP headers that my computer sends to the web server you can input curl -verbose 'url'. (cite: https://flaviocopes.com/http-curl/)
