@@ -1,0 +1,51 @@
+Author: Sydney Nguyen
+
+============================================== DAYTIME ==============================================
+
+1. The important frames to look at during the TCP handshake are the SYN, SYN-ACK, and ACK.
+      Frames: 
+          1. 192.168.35.128   132.163.96.6      TCP     [SYN]
+          2. 132.163.96.6     192.168.35.128    TCP     [SYN, ACK]
+          3. 192.168.35.128   132.163.96.6      TCP     [ACK]
+          
+2. The port that the client uses for this interaction is 47036 clients need a port because to establish the two way connection to recieve and give data a port must be 
+used by the client and the server to do the TCP handshake.
+
+3. Frame 4 holds the actual date and time
+    Frame: 132.163.96.6      192.168.35.128     105 DAYTIME RESPONSE
+    
+4. The full content of the frame when ignoring certain aspects ETHERNET, IP, ect the frame consists of byte
+or ascii representaiton of the respond so the daytime in ascii hexadecimal characters.
+
+5.[SYN] means to synchronize which is the request of a connections between a client and a server.
+
+6.[ACK] means to acknowledge the request and that it was recieved. 
+
+7.[FIN] means the finish or the request for the connection to be broken.
+
+8. The nc client requested for the termination of the connection because the source of the message for
+fin was from 192.168.35.128 which is labelled as the source and the destination is labeled as the Daytime server.
+
+============================================== HTTP ==============================================
+
+1. There were two TCP connection request from the same source and to the same destination.
+
+2.Yes we are able to tell where it was requested. In frame 7.
+
+    Frame:
+      7.      192.168.35.128      45.79.89.123      HTTP 395 GET/index.html HTTP/1.1
+
+3.Yes we are able to tell where it was requested. In frame 11.
+
+    Frame:
+      11.      192.168.35.128      45.79.89.123      HTTP 364 GET/jeff_square_head.jpg HTTP/1.1
+
+============================================== QUESTIONS ==============================================
+
+Why did your website cause a tcp handshake but not when we looked at the other daytime website?
+In what order are things requested or how do we order the way things are requested i.e your picture or the index? 
+  How do we make one come before the other?
+When using the ignore feature why does it sometimes grab other frames to ignore as well?
+What is PDU?
+Should we be saving after our wireshark labs?
+
