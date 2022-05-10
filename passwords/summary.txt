@@ -1,3 +1,5 @@
+Author: Sydney Nguyen
+
 Part 1
 Total time: 0m0.58s
 Number of hashes computed: 267751
@@ -15,12 +17,12 @@ Time per password cracked: [seconds per password]
 Passwords cracked per number of hashes computed: [passwords per hash]
 
 Part 3
-Total time: [user time from a "time" command]
-Number of hashes computed: [count of the # of hashes computed] 
-Passwords cracked: [number cracked]
-Time per hash computed: [seconds per hash]
-Time per password cracked: [seconds per password]
-Passwords cracked per number of hashes computed: [passwords per hash]
+Total time: 12m45.649s
+Number of hashes computed: 754,010,283
+Passwords cracked: 2805
+Time per hash computed: 0.000000016511
+Time per password cracked: 0.00443850267
+Passwords cracked per number of hashes computed: 0.0000037201
 
 Analysis:
 - Did your time per hash computed change between phases? By what factor? Why?
