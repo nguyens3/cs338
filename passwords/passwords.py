@@ -22,14 +22,14 @@ def cracked1():
     hash = password.split(":") 
     if hash[1] in hashWords:
         f.write(hash[0]+":"+hashWords[hash[1]]+"\n")
-  
-  
   f.close()
   print(f"Hash: {hash_count}")
 
     
 
-
+def cracked2():
+ 
+def cracked3():
 
 
 def main():
