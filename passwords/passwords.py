@@ -25,15 +25,37 @@ def cracked1():
   f.close()
   print(f"Hash: {hash_count}")
 
-    
 
 def cracked2():
  
 def cracked3():
+  words = [line.strip().lower() for line in open('words.txt')] 
+  hash= {}
+  f = open("cracked3.txt", "w")
+  passwords = [line.strip() for line in open('passwords3.txt')]
+  hash_count = 0
+  for account in passwords:
+    hash = account.split(':')
+    hashed= hash[1].split('$')
+    salt = hashed[2]
+    password = hashed[3]
+    for word in words:
+      salted_word = salt + word
+      hasher = hashlib.sha256(salted_word.encode('utf-8'))
+      digest = binascii.hexlify(hasher.digest())
+      digest_string = digest.decode('utf-8')
+      hash_count += 1
+      if(password == digest_string):
+         f.write(hash[0]+":"+word +"\n")
+  f.close()
+  print("Hash:", hash_count)
+
 
 
 def main():
     cracked1()
+    cracked2()
+    cracked3()
 
       
 if __name__=="__main__":
