@@ -9,8 +9,9 @@ Time per password cracked: 0.0002067736
 Passwords cracked per number of hashes computed: 0.01047615134
 
 Part 2
+Should be noted there may be an error in calculations because of low CPU and crashing
 Total time: [user time from a "time" command]
-Number of hashes computed: [count of the # of hashes computed] 
+Number of hashes computed:  
 Passwords cracked: [number cracked]
 Time per hash computed: [seconds per hash]
 Time per password cracked: [seconds per password]
@@ -26,7 +27,11 @@ Passwords cracked per number of hashes computed: 0.0000037201
 
 Analysis:
 - Did your time per hash computed change between phases? By what factor? Why?
+
+
 - Did your time per password crack change between phases? By what factor? Why?
+
+
 - Suppose you wanted to precompute all the hashes for each possible password
 so you could just look up the password in a table indexed by the hash. How much
 memory would be required for each phase?
