@@ -28,10 +28,14 @@ Passwords cracked per number of hashes computed: 0.0000037201
 
 Analysis:
 - Did your time per hash computed change between phases? By what factor? Why?
-The time per hash computed stayed fairly consistent which is to be expected, as with the hashing is constant no matter the input we are producing the same 32 byte hash string from the same 16 byte passwords, according to Jeff's assignment page. 
+The time per hash computed stayed fairly consistent which is to be expected, as with the hashing is constant no matter the input we are
+producing the same 32 byte hash string from the same 16 byte passwords, according to Jeff's assignment page. 
 
 - Did your time per password crack change between phases? By what factor? Why?
-Yes it did change, it makes sense as for part 2 we are attempting to crack 2 words passwords which increases the amount of possibilites the password can be as well as the amount of comparisons we will need to do. There isn't necessarily a pattern but phase 2 took 169449 times the amount of time needed that phase one needed and phase 3 needed 21 times the amount of time as phase one. This is to be expected because Phase 3 only needs a little more time to take in the salts and comparison where phase 2 needs to take into account over double the words. 
+Yes it did change, it makes sense as for part 2 we are attempting to crack 2 words passwords which increases the amount of possibilites 
+the password can be as well as the amount of comparisons we will need to do. There isn't necessarily a pattern but phase 2 took 169449 times 
+the amount of time needed that phase one needed and phase 3 needed 21 times the amount of time as phase one. This is to be expected because 
+Phase 3 only needs a little more time to take in the salts and comparison where phase 2 needs to take into account over double the words. 
 
 - Suppose you wanted to precompute all the hashes for each possible password
 so you could just look up the password in a table indexed by the hash. How much
@@ -47,10 +51,19 @@ For password 3 we take the same computation from password one but then need to m
 - Give 3-4 reasons we should store password hashes and not the passwords themselves.
 Think in terms of threats, who the attackers might be, etc.
 
-Hashing is important for storing passwords because when you enter a password it is sent to a database. Whomever runs that database will be able to read and access the passwords of all accounts if they are in plain text, but with hashing it will be seen as mumbo jumbo, unless they are aware of hashing.
+Hashing is important for storing passwords because when you enter a password it is sent to a database.
+Whomever runs that database will be able to read and access the passwords of all accounts if they are in plain text, 
+but with hashing it will be seen as mumbo jumbo, unless they are aware of hashing.
 
-Another important reason to has is say that the said person does know what hashing is and wants to access the data hashing is very hard to reverse engineer making it very time consuming and need a lot of computer power to crack. Hashing makes it extremly difficult to decode the hash. One small error can cause a major error in the long run as hashes are very input sensitive the slightest difference can create a fully different has therefore making one error in reverse engineering fatal for the whole hacking plan.
+Another important reason to has is say that the said person does know what hashing is and wants to access the data hashing 
+is very hard to reverse engineer making it very time consuming and need a lot of computer power to crack. Hashing makes 
+it extremly difficult to decode the hash. One small error can cause a major error in the long run as hashes are very input sensitive 
+the slightest difference can create a fully different has therefore making one error in reverse engineering fatal for the whole hacking plan.
 
-Hashing with salt allows for many users to have the same password, but not have the same hash for their password. As many people like to choose simple passwords as their loved ones names or simply password this allows for more people to have the password and if one of their hash's were to be comporomised the others with the same password's data will still be protected.
+Hashing with salt allows for many users to have the same password, but not have the same hash for their password.
+As many people like to choose simple passwords as their loved ones names or simply password this allows for more 
+people to have the password and if one of their hash's were to be comporomised the others with the same password's data will still be protected.
 
-Hashing the passwords makes it easier to store and use in the database as many different people will have different length passwords varying in characters and symbols hashing creates a uniform data for storage. 
+Hashing the passwords makes it easier to store and use in the database as many different people will have 
+different length passwords varying in characters and symbols hashing creates a uniform data for storage. 
+
